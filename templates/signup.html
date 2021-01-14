@@ -16,9 +16,7 @@
             <input type="password" id="inputPassword" class="form-control" placeholder="password1" name="password" required>
             <input type="password" class="form-control" placeholder="password2" name="re_password" required>
             {{ if .error }}
-            {{ range .msg }}
-            <p>{{ . }}</p>
-            {{ end }}
+            <p>{{ .msg }}</p>
             {{ end }}
             <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
         </form>

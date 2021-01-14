@@ -9,17 +9,17 @@ import (
 	"bluebell/router"
 	"bluebell/setting"
 	"fmt"
-	"os"
 )
 
 func main() {
-	if len(os.Args) < 2 {
-		fmt.Println("need config file config.yaml")
-		return
-	}
+	//if len(os.Args) < 2 {
+	//	fmt.Println("need config file config.yaml")
+	//	return
+	//}
 
 	// 加载配置
-	if err := setting.Init(os.Args[1]); err != nil {
+	//if err := setting.Init(os.Args[1]); err != nil {
+	if err := setting.Init("conf/config.yaml"); err != nil {
 		fmt.Println("load config file error:", err)
 		return
 	}

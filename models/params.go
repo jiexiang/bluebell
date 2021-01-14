@@ -1,5 +1,10 @@
 package models
 
+type ParamLogin struct {
+	Username string `form:"username" binding:"required"`
+	Password string `form:"password" binding:"required"`
+}
+
 type ParamSignUp struct {
 	Username   string `form:"username" binding:"required"`
 	Password   string `form:"password" binding:"required"`
